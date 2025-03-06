@@ -1,21 +1,19 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Home from './pages/Home'
-import Collection from './pages/BookOnline'
-import About from './pages/Shop'
-import Blog from './pages/Blog'
-
-
+import P_s from './pages/P_s'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import About from './pages/About'
 
 const App = () => {
   return (
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]' >
+    <div className="min-h-screen bg-black">
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/bookonline' element={<BookOnline/>}/>
-        <Route path='/shop' element={<Shop/>}/>
-        <Route path='/blog' element={<Blog/>}/>
+        <Route path='/productsandservices' element={<P_s/>}/>
+        <Route path='/aboutus' element={<About/>}/>
       </Routes>
       <Footer/>
     </div>
